@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="ChatGPT Image 22 мая 2026 г., 19_31_43.png" type="image/x-icon">
+<title>Jamshid Kurbonov Barber</title>
+
+<style>
+    /* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:gold;
+    text-shadow:0 0 15px gold;
+    animation:logo3d 4s infinite alternate;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:18px;
+    transition:0.4s;
+}
+
+nav a:hover{
+    color:gold;
+    text-shadow:0 0 15px gold;
+}
+
+/* ========================= */
+/* HOME */
+/* ========================= */
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+
+    url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:80px;
+    color:gold;
+    text-shadow:0 0 20px gold;
+    animation:glow 2s infinite alternate;
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:25px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 40px;
+    background:gold;
+    color:black;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px gold;
+}
+
+/* ========================= */
+/* XIZMATLAR */
+/* ========================= */
+
+.services{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.services h1{
+    font-size:60px;
+    color:gold;
+    margin-bottom:70px;
+    text-shadow:0 0 20px gold;
+}
+
+.service-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+}
+
+.service-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:25px;
+    padding:40px 25px;
+    transition:0.5s;
+    backdrop-filter:blur(10px);
+}
+
+.service-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px rgba(255,215,0,0.4);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.service-card h2{
+    color:gold;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.service-card p{
+    color:#ddd;
+    line-height:1.7;
+    font-size:18px;
+}
+
+/* ========================= */
+/* GALEREYA */
+/* ========================= */
+
+.gallery{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.gallery h1{
+    font-size:60px;
+    color:gold;
+    margin-bottom:70px;
+    text-shadow:0 0 20px gold;
+}
+
+.gallery-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.gallery-card{
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.gallery-card img{
+    width:350px;
+    height:450px;
+    object-fit:cover;
+    transition:0.5s;
+    border-radius:25px;
+}
+
+.gallery-card img:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px gold;
+}
+
+/* ========================= */
+/* BOG‘LANISH */
+/* ========================= */
+
+.contact{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.contact h1{
+    font-size:60px;
+    color:gold;
+    margin-bottom:70px;
+    text-shadow:0 0 20px gold;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+}
+
+.contact-card{
+    padding:40px 25px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.5s;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(255,215,0,0.4);
+}
+
+.contact-card h2{
+    color:gold;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.contact-card p{
+    color:#ddd;
+    line-height:1.7;
+    font-size:18px;
+}
+
+.contact-card a{
+    color:white;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.contact-container{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap:35px;
+
+    justify-content:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+    .contact-container{
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .contact-container{
+        grid-template-columns:
+        repeat(1, 1fr);
+    }
+
+}
+
+.contact-card a:hover{
+    color:gold;
+    text-shadow:0 0 15px gold;
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes glow{
+
+    from{
+        text-shadow:0 0 15px gold;
+    }
+
+    to{
+        text-shadow:
+        0 0 30px gold,
+        0 0 60px gold;
+    }
+
+}
+
+@keyframes logo3d{
+
+    from{
+        transform:rotateY(0deg);
+    }
+
+    to{
+        transform:rotateY(15deg);
+    }
+
+}
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        💈 Jamshid Kurbonov
+    </div>
+
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#contact">Bog‘lanish</a>
+        <a href="#gallery">Galereya</a>
+    </nav>
+
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>Jamshid Kurbonov</h1>
+
+        <p>
+            Zamonaviy va professional sartarosh xizmati
+        </p>
+
+        <a href="#contact" class="btn">
+            Bog‘lanish
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- XIZMATLAR -->
+<!-- ========================= -->
+
+<section class="services" id="services">
+
+    <h1>Xizmatlar</h1>
+
+    <div class="service-container">
+
+        <div class="service-card">
+            <div class="icon">✂️</div>
+
+            <h2>Soch olish</h2>
+            <p>Narxi: 45,000SUM</p>
+            <p>
+                Professional va zamonaviy
+                erkaklar soch turmaklari.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🧔</div>
+
+            <h2>Soqol dizayni</h2>
+            <p>Narxi: 25,000SUM</p>
+            <p>
+                Soqol tekislash va premium
+                soqol styling xizmati.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🔥</div>
+
+            <h2>Bolalar soch olish</h2>
+                <p>Narxi: 35,000SUM</p>
+            <p>
+                Bolalar uchun soch olish xizmati.
+            </p>
+        </div>
+
+     
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- GALEREYA -->
+<!-- ========================= -->
+
+<section class="gallery" id="gallery">
+
+    <h1>Galereya</h1>
+
+    <div class="gallery-container">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- BOG‘LANISH -->
+<!-- ========================= -->
+
+<section class="contact" id="contact">
+
+    <h1>Bog‘lanish</h1>
+
+   
+    
+        <div class="contact-container">
+    
+            <!-- TELEFON -->
+            <div class="contact-card">
+    
+                <h2>📞 Telefon</h2>
+    
+                <p>
+                    <a href="tel:+998944188998">
+                        +998 94 418 89 98
+                    </a>
+                </p>
+    
+            </div>
+    
+            <!-- TELEGRAM -->
+            <div class="contact-card">
+    
+                <h2>📱 Telegram</h2>
+    
+                <p>
+                    <a href="https://t.me/Jamshid131313"
+                    target="_blank">
+    
+                        Tugmaga bosing
+    
+                    </a>
+                </p>
+    
+            </div>
+    
+            <!-- WHATSAPP -->
+            <div class="contact-card">
+    
+                <h2>💬 WhatsApp</h2>
+    
+                <p>
+                    <a href="https://wa.me/998944188998"
+                    target="_blank">
+    
+                        Tugmaga bosing
+    
+                    </a>
+                </p>
+    
+            </div>
+    
+            <!-- MANZIL -->
+            <div class="contact-card">
+    
+                <h2>📍 Manzil</h2>
+    
+                <p>
+                    <a href="https://maps.google.com/?q=Uchtepa tumani 24-kvartal KAFE MOSKVA"
+                    target="_blank">
+            
+                        Tugmaga bosing
+                        
+                        
+            
+                    </a>
+                </p>
+    
+            </div>
+    
+            <!-- ISH VAQTI -->
+            <div class="contact-card">
+    
+                <h2>⏰ Ish vaqti</h2>
+    
+                <p>
+                    09:00 - 21:00
+                </p>
+    
+            </div>
+    
+            <!-- ISH KUNLARI -->
+            <div class="contact-card">
+    
+                <h2>📅 Ish kunlari</h2>
+    
+                <p>
+                    Dushanba,
+                    Seshanba,
+                    Chorshanba,
+                    Payshanba,
+                    Juma,
+                    Shanba
+                </p>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+
+</section>
+
+</body>
+</html>
